@@ -1,0 +1,198 @@
+/* frontend_cripto/src/components/Support.css */
+.support-container {
+  padding: 40px 20px;
+  background-color: #282c34;
+  color: white;
+  min-height: calc(100vh - 80px); /* Ajusta según la altura de tu navbar */
+  text-align: center;
+}
+
+.support-container h2 {
+  font-size: 3em;
+  color: #61dafb;
+  margin-bottom: 40px;
+}
+
+.support-content {
+  background-color: #3a3f47;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 600px; /* Reducido para hacerlo más compacto */
+  margin: 0 auto;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.support-content p {
+  font-size: 1.1em;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+.contact-info, .faq-section {
+  background-color: #444951;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #555;
+}
+
+.contact-info h3, .faq-section h3 {
+  font-size: 1.6em;
+  color: #61dafb;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.contact-info p {
+  margin-bottom: 8px;
+}
+
+.contact-info strong {
+  color: #e0e0e0;
+}
+
+.faq-section ul {
+  list-style-type: disc;
+  margin-left: 20px;
+  color: #ccc;
+}
+
+.faq-section li {
+  margin-bottom: 5px;
+  font-size: 1.1em;
+}
+
+/* --- ESTILOS PARA EL FORMULARIO DE SOPORTE --- */
+.support-form-section {
+  background-color: #444951;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #555;
+  text-align: center; /* Centrar el contenido dentro de la sección del formulario */
+}
+
+.support-form-section h3 {
+  font-size: 1.6em;
+  color: #61dafb;
+  margin-bottom: 15px;
+}
+
+.support-form-section p {
+  margin-bottom: 20px;
+}
+
+.support-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center; /* Centrar los elementos del formulario */
+}
+
+.support-form label {
+  font-size: 1.1em;
+  color: #ccc;
+  width: 90%; /* Ajustado para ser más compacto */
+  text-align: left; /* Alinear el texto de la etiqueta a la izquierda */
+}
+
+.support-form input[type="email"],
+.support-form input[type="text"],
+.support-form textarea {
+  width: 90%; /* Ajustado para ser más compacto */
+  padding: 12px;
+  border: 1px solid #555;
+  border-radius: 8px;
+  background-color: #444;
+  color: white;
+  font-size: 1em;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.support-form input:focus,
+.support-form textarea:focus {
+  border-color: #61dafb;
+}
+
+.support-form textarea {
+  resize: vertical; /* Permite redimensionar verticalmente */
+  min-height: 80px; /* Reducido para hacerlo más compacto */
+}
+
+.form-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  width: 90%; /* Para que los botones también estén centrados y con el mismo ancho */
+  margin-top: 10px;
+}
+
+.send-message-button, .back-button-form {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+  flex: 1; /* Permite que los botones ocupen el espacio disponible */
+}
+
+.send-message-button {
+  background-color: #007bff; /* Azul para enviar mensaje */
+  color: white;
+}
+
+.send-message-button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+.back-button-form {
+  background-color: #6c757d; /* Gris para el botón de volver */
+  color: white;
+}
+
+.back-button-form:hover {
+  background-color: #5a6268;
+  transform: translateY(-2px);
+}
+
+.form-status-message {
+  margin-top: 20px;
+  font-size: 1.1em;
+  color: #fff; /* Color por defecto*/
+}
+/* --- FIN ESTILOS PARA EL FORMULARIO DE SOPORTE --- */
+
+
+/* Media queries para responsividad */
+@media (max-width: 768px) {
+  .support-content {
+    padding: 20px;
+    max-width: 95%; /* Ajustar el ancho en pantallas pequeñas */
+  }
+
+  .support-container h2 {
+    font-size: 2.5em;
+  }
+
+  .contact-info h3, .faq-section h3, .support-form-section h3 {
+    font-size: 1.4em;
+  }
+
+  .support-form label,
+  .support-form input,
+  .support-form textarea,
+  .form-buttons {
+    width: 95%; /* Ajustar el ancho en pantallas pequeñas */
+  }
+
+  .form-buttons {
+    flex-direction: column; /* Apilar botones en pantallas pequeñas */
+  }
+}
