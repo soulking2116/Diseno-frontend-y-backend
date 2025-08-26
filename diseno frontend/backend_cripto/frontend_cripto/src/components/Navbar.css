@@ -1,0 +1,101 @@
+/* frontend_cripto/src/components/Navbar.css */
+.navbar {
+  background-color: #1a1a1a; /* Un gris más oscuro, casi negro */
+  padding: 10px 30px; /* Ajustado el padding para más espacio vertical y horizontal */
+  display: flex;
+  justify-content: space-between; /* Empuja los grupos a los extremos */
+  align-items: center; /* Centra verticalmente los elementos */
+  color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4); /* Sombra más pronunciada */
+  flex-wrap: wrap;
+  font-family: 'Inter', sans-serif;
+}
+
+.navbar-left-group,
+.navbar-right-group {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Espacio entre los elementos dentro de cada grupo */
+}
+
+.navbar-brand {
+  color: white;
+  text-decoration: none;
+  font-size: 2em; /* Tamaño de fuente para el logo/marca */
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-right: 25px; /* Espacio entre la marca y el primer enlace */
+  white-space: nowrap; /* Evita que el texto de la marca se rompa */
+}
+
+.navbar-item {
+  color: white;
+  text-decoration: none;
+  font-size: 1.05em; /* Ligeramente más pequeño para los items */
+  padding: 8px 15px; /* Más padding para que parezcan botones */
+  border-radius: 6px; /* Bordes ligeramente redondeados */
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.1s ease;
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  font-weight: 500; /* Un poco más de grosor en la fuente */
+}
+
+.navbar-item:hover {
+  background-color: #333; /* Un gris más claro al pasar el ratón */
+  color: #61dafb; /* Color de acento al pasar el ratón */
+  transform: translateY(-1px);
+}
+
+.navbar-item.logout-button {
+  background-color: #493696; /* Color para el botón de cerrar sesión */
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 8px 20px; /* Padding ajustado */
+  border-radius: 6px;
+  font-size: 1.1em; /* Ligeramente más grande */
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra para el botón */
+}
+
+.navbar-item.logout-button:hover {
+  background-color: #382a70; /* Color al pasar el ratón */
+  transform: translateY(-2px);
+}
+
+/* Media queries para responsividad */
+@media (max-width: 900px) { /* Ajustado el breakpoint para tabletas */
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 20px;
+  }
+
+  .navbar-left-group,
+  .navbar-right-group {
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+    margin-top: 15px;
+    gap: 8px; /* Reducir el espacio entre elementos en móvil */
+  }
+
+  .navbar-brand {
+    margin-right: 0; /* Eliminar margen en móvil */
+    margin-bottom: 10px; /* Espacio debajo de la marca */
+  }
+
+  .navbar-item {
+    width: 100%;
+    text-align: left;
+    padding: 10px 15px; /* Ajustar padding en móvil */
+  }
+
+  .navbar-item.logout-button {
+    margin-left: 0;
+    width: 100%;
+  }
+}
